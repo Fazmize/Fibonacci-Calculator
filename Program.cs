@@ -1,4 +1,5 @@
 ﻿
+using System.Diagnostics;
 using System.Numerics;
 
 namespace Fibonacci
@@ -8,9 +9,11 @@ namespace Fibonacci
         static void Main(string[] args)
         {
             //Fibonacci(1476) is the biggest calculable argument
+            using(new TimeWatch())
+            {
+                GetFibonacci(1476);
+            }
             
-            BigInteger bigInteger = new(GetFibonacci(1476));
-            Console.WriteLine(bigInteger);
         }
 
         public static double GetFibonacci(int fibonacciNumber)
@@ -34,6 +37,7 @@ namespace Fibonacci
             string FibResult = $"Fibonacci of {fibNumber} = ";
             Console.WriteLine(FibResult + GetFibonacci(fibNumber).ToString());
         }
+ 
     }
 
 
