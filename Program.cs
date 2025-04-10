@@ -1,6 +1,7 @@
 ﻿
 using System.Diagnostics;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 
 namespace Fibonacci
 {
@@ -37,8 +38,5 @@ namespace Fibonacci
             string FibResult = $"Fibonacci of {fibNumber} = ";
             Console.WriteLine(FibResult + GetFibonacci(fibNumber).ToString());
         }
- 
     }
-
-
 }
